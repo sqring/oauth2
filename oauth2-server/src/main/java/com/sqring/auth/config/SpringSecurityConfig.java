@@ -1,5 +1,6 @@
 package com.sqring.auth.config;
 
+import com.sqring.auth.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,13 +18,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  */
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Autowired // 在 SpringSecurityBean 添加到容器了
     private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private CustomUserDetailsService customUserDetailsService;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         // 内存方式存储用户信息
-        auth.inMemoryAuthentication().withUser("admin")
-                .password(passwordEncoder.encode("1234")).authorities("product");
+        auth.userDetailsService(customUserDetailsService);
     }
 
     /**
