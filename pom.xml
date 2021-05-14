@@ -11,6 +11,7 @@
 
     <modules>
         <module>oauth2-server</module>
+        <module>oauth2-common</module>
     </modules>
 
     <parent>
@@ -33,7 +34,7 @@
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-io.version>2.6</commons-io.version>
         <!-- 定义版本号, 子模块直接引用-->
-        <oauth2-security.version>1.0-SNAPSHOT</oauth2-security.version>
+        <oauth2-security.version>1.0.0</oauth2-security.version>
     </properties>
 
 

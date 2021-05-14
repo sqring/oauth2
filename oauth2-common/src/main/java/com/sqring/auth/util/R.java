@@ -70,7 +70,7 @@ public class R implements Serializable {
 
 
     /**
-     * JSON字符串转成 MengxueguResult 对象
+     * JSON字符串转成对象
      * @param json
      * @return
      */
