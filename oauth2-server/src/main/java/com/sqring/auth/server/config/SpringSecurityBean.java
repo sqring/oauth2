@@ -1,4 +1,4 @@
-package com.sqring.auth.config;
+package com.sqring.auth.server.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

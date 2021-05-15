@@ -1,13 +1,12 @@
-package com.sqring.auth.config;
+package com.sqring.auth.server.config;
 
-import com.sqring.auth.service.CustomUserDetailsService;
+import com.sqring.auth.server.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * @author www.zhouwenfang.com
@@ -18,9 +17,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  */
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
-
-    @Autowired // 在 SpringSecurityBean 添加到容器了
-    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
