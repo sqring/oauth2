@@ -1,4 +1,4 @@
-package com.sqring.auth;
+package com.sqring.auth.sso;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class ProductResourceApplication {
+public class SsoClient2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProductResourceApplication.class, args);
+        SpringApplication.run(SsoClient2Application.class, args);
     }
 
 }

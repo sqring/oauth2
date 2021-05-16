@@ -8,9 +8,8 @@
         <version>1.0.0</version>
     </parent>
 
-
-    <artifactId>oauth2-resource-product</artifactId>
-    <description>资源服务 商品模块</description>
+    <artifactId>oauth2-sso-client1</artifactId>
+    <description>sso单点登陆 客户端1</description>
 
     <dependencies>
         <dependency>
@@ -18,7 +17,6 @@
             <artifactId>oauth2-common</artifactId>
             <version>${oauth2-security.version}</version>
         </dependency>
-        <!--spring mvc相关的-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -35,20 +33,16 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-
-        <!-- thymeleaf 模块启动器
+        <!-- thymeleaf 模块启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-        -->
-        <!--对Thymeleaf添加Spring Security标签支持
-         <dependency>
-             <groupId>org.thymeleaf.extras</groupId>
-             <artifactId>thymeleaf-extras-springsecurity5</artifactId>
-         </dependency>
-		 -->
-
+        <!--对Thymeleaf添加Spring Security标签支持-->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+        </dependency>
         <!-- springboot 单元测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -60,14 +54,5 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
