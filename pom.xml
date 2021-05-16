@@ -10,8 +10,9 @@
     <description>oauth2 学习实战</description>
 
     <modules>
-        <module>oauth2-server</module>
+        <module>oauth2-authorization</module>
         <module>oauth2-common</module>
+        <module>oauth2-resource-product</module>
     </modules>
 
     <parent>

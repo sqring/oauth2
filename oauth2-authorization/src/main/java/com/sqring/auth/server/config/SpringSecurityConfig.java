@@ -23,7 +23,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // 内存方式存储用户信息
         auth.userDetailsService(customUserDetailsService);
     }
 

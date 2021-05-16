@@ -8,14 +8,15 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>oauth2-server</artifactId>
-    <description>资源认证服务器</description>
+
+    <artifactId>oauth2-resource-product</artifactId>
+    <description>资源服务 商品模块</description>
 
     <dependencies>
         <dependency>
             <groupId>com.sqring</groupId>
             <artifactId>oauth2-common</artifactId>
-            <version>1.0.0</version>
+            <version>${oauth2-security.version}</version>
         </dependency>
         <!--spring mvc相关的-->
         <dependency>
@@ -28,38 +29,12 @@
             <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
 
-        <!-- redis-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-
-        <!--mybatis-plus启动器-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-
-        <!--druid连接池-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
         <!-- 注册到 Eureka
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        -->
+        </dependency>-->
+
 
         <!-- thymeleaf 模块启动器
         <dependency>
@@ -84,18 +59,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--启动类-->
-                <configuration>
-                    <mainClass>com.sqring.auth.AuthServerApplication</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>

@@ -34,6 +34,12 @@ public class TokenConfig {
         return new DruidDataSource();
     }
 
+    /**
+     * JDBC 管理令牌
+     * 1. 创建相关数据表
+     * 2. 添加 jdbc 相关依赖
+     * 3. 配置数据源信息
+     */
     @Bean
     public TokenStore tokenStore() {
         // redis管理token
@@ -42,13 +48,5 @@ public class TokenConfig {
         // jdbc 管理token
         return new JdbcTokenStore(dataSource());
     }
-
-    /**
-     * JDBC 管理令牌
-     * 1. 创建相关数据表
-     * 2. 添加 jdbc 相关依赖
-     * 3. 配置数据源信息
-     */
-
 
 }
