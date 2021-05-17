@@ -25,7 +25,7 @@ public class MainController {
 
     @GetMapping("/member")
     public String member() {
-//        R result = oAuth2RestTemplate.getForObject("http://localhost:8080/product/list", R.class);
+        //R result = oAuth2RestTemplate.getForObject("http://localhost:8080/product/list", R.class);
         ResponseEntity<R> entity =
                 oAuth2RestTemplate.getForEntity("http://localhost:7001/product/list", R.class);
         R body = entity.getBody();
